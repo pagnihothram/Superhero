@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script>
+        function createStory() {
+            
+            var name1 = document.getElementById("name1").value;
+            document.getElementById("name1Output").innerHTML = name1;
+
+            var power = document.getElementById("power").value;
+            document.getElementById("superpowerOutput").innerHTML = power;
+
+            var vehicle = document.getElementById("vehicle").value;
+            document.getElementById("vehicleOutput").innerHTML = vehicle;
+            
+            var sidekick = document.getElementById("sidekick").value;
+            document.getElementById("sidekickOutput").innerHTML = sidekick;
+
+            var sidekickPower = document.getElementById("sidekickPower").value;
+            document.getElementById("power2Output").innerHTML = sidekickPower;
+
+            var city = document.querySelector('input[name="city"]:checked').value;
+            document.getElementById("city").innerHTML = city;
+
+            var fameIsChecked = document.getElementById("reason1").checked;
+            var moneyIsChecked = document.getElementById("reason2").checked;
+            var goodIsChecked = document.getElementById("reason3").checked;
+
+            if(fameIsChecked) {
+                document.getElementById("forFame").innerHTML = "I protect people for fame.";                
+            }
+
+            if(moneyIsChecked) {
+                document.getElementById("forMoney").innerHTML = "I protect people for Money.";
+            }
+
+            if(goodIsChecked){
+                document.getElementById("forGoodness").innerHTML = "I protect people because it is the right thing to do.";
+            }
+        }
+    </script>
+
+
+</head>
+<form action="javascript:createStory();">
+
+    <div class="form-group">
+        <label for="name1">A Name</label>
+        <input type="text" class="form-control" id="name1" aria-describedby="nameHelp" placeholder="Enter a superhero name">
+        <small id="nameHelp" class="form-text text-muted">Any name you want.</small>
+    </div>
+    <div class="form-group">
+        <label for="power">Super Power</label>
+        <input type="text" class="form-control" id="power" placeholder="Enter a super power">
+    </div>
+    <div class="form-group">
+        <label for="vehicle">A Vehicle</label>
+        <input type="text" class="form-control" id="vehicle" placeholder="Type a vehicle">
+    </div>
+    <div class="form-group">
+        <label for="sidekick">Sidekick Name</label>
+        <input type="text" class="form-control" id="sidekick" placeholder="Another Hero Name">
+    </div>
+    <div class="form-group">
+        <label for="sidekickPower">Sidekick Power</label>
+        <input type="text" class="form-control" id="sidekickPower" placeholder="Another Superpower">
+    </div>
+<h4>Protecting City</h2>
+    
+<!--Protecting City-->
+    <input type="radio" id="Gotham" name="city" value="Gotham">
+    <label for="Gotham">Gotham</label><br>
+    <input type="radio" id="Metrapolis" name="city" value="Metrapolis">
+    <label for="Metrapolis">Metrapolis</label><br>
+
+<h4>Reason of Protection</h4>
+
+<!--Reason Of Protection-->
+<label for="reason1">Fame</label>
+<input type="checkbox" id="reason1">
+<br>
+<label for="reason2">Money</label>
+<input type="checkbox" id="reason2">
+<br>
+<label for="reason3">It is the right thing to do</label>
+<input type="checkbox" id="reason3"> 
+<br>
+    <input type="submit" value="Submit my story" class="btn btn-success">
+    <button type="reset" value="Reset"  class="btn btn-warning">Clear Form</button>
+</form>
+
+
+<br /><br />
+My super hero name is <span id="name1Output">_____</span> and I have the power of <span id="superpowerOutput">_____</span>. I ride the <span
+    id="vehicleOutput">_____</span>. My sidekick's name is <span id="sidekickOutput">_____</span>. and he has the power of <span id="power2Output">_____</span>.
+     I protect the city <span id="city"></span>. <span id="forFame"></span> <span id="forMoney"></span> <span id=forGoodness></span>
+
+</html>
