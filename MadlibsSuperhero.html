@@ -32,6 +32,9 @@
             var city = document.querySelector('input[name="city"]:checked').value;
             document.getElementById("city").innerHTML = city;
 
+            var Villain = document.getElementById("Villain").value;
+            document.getElementById("VillainName").innerHTML = Villain;
+
             var fameIsChecked = document.getElementById("reason1").checked;
             var moneyIsChecked = document.getElementById("reason2").checked;
             var goodIsChecked = document.getElementById("reason3").checked;
@@ -75,6 +78,10 @@
         <label for="sidekickPower">Sidekick Power</label>
         <input type="text" class="form-control" id="sidekickPower" placeholder="Another Superpower">
     </div>
+    <div class="form-group">
+        <label for="Villain">Villain Name</label>
+        <input type="text" class="form-control" id="Villain" placeholder="A Name">
+    </div>
 <h4>Protecting City</h2>
     
 <!--Protecting City-->
@@ -103,6 +110,6 @@
 <br /><br />
 My super hero name is <span id="name1Output">_____</span> and I have the power of <span id="superpowerOutput">_____</span>. I ride the <span
     id="vehicleOutput">_____</span>. My sidekick's name is <span id="sidekickOutput">_____</span>. and he has the power of <span id="power2Output">_____</span>.
-     I protect the city <span id="city"></span>. <span id="forFame"></span> <span id="forMoney"></span> <span id=forGoodness></span>
+     I protect the city <span id="city"></span>. <span id="forFame"></span> <span id="forMoney"></span> <span id=forGoodness></span>. My arch nemesis is <span id="VillainName">____</span>.
 
 </html>
